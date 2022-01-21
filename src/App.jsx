@@ -1,67 +1,60 @@
-import React ,{Component}  from 'react';
+import React, { Component } from 'react';
+import { Header, Logo } from './components/Header.jsx';
+import footer from './components/Footer.jsx';
 // import { Component } from 'react/cjs/react.production.min';
 import './App.css';
-import logo from './logo.svg';
+import Footer from './components/Footer.jsx';
+import BasicTextFields from './components/TextField';
 
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        {/* <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p> */}
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Hello world | Fasih Ahmed Raza
-        </a>
-      </header>
-    </div>
-  );
+
+
+
+class App extends Component {
+  constructor(){
+    super()
+    this.state = {
+      name : "Fasih Ahmed",
+      email : "thisfasih@gmail.com",
+      PhoneNumber:"03121234454",
+
+    }
+  }
+//   set_name(){
+// console.log("Runing .......");
+//   }
+
+get_name = () => {
+ console.log(this.state.name)
 }
-// class Header extends Component {
-//      render(){
-//        return(
-//          <div className='header'>
-//            <h2>Header</h2>
-//          </div>
-//        )
-//      }
-// }
-// class Footer extends Component{
-//   render(){
-//     return(
-//       <div className='footer'>
-//         <h2> Footer</h2>
-//       </div>
-//     )
-//   }
-// }
+set_name =() => {
+  this.setState({
+    name: "Fahad Ali"
+  })
+}
 
-// class App extends React.Component{
-//   render(){
-     
-//     return(
-//       <div>
-//         <Header />
+  render() {
 
-//         {/* // for  write inline css then we use this syntax
-//         // margin-left : incorrect in react 
-//         //we use 2nd letter capital marginLeft */}
-//         <h1 style={{backgroundColor:'blue', fontFamily:'sans-serif' ,fontSize:"20px"}}>Main Components</h1>
+    return (
+      <div>
+        <Header />
+
+         <h2>My name is {this.state.name}</h2> 
+         <h2>My email is {this.state.email}</h2>
+         <input type="text" placeholder='ENTER VALUE'/>
+         <button onClick={this.set_name}>Set Name</button>
+          {/* // 2nd method for call is  { () => this.set_name()} */}
+          <button onClick={this.get_name}>get Name</button>
         
+        <BasicTextFields /> 
+        <Footer />
 
-        
-//         <Footer />
-//       </div>
-//     )
-//   }
-// }
+   
+
+      </div>
+    )
+  }
+}
 
 
 export default App;
