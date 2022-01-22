@@ -46,7 +46,7 @@ handleChange(e){
 }
 
 get_props = (props) => {
- 
+ console.log(props)
 }
 
 
