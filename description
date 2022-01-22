@@ -55,8 +55,15 @@ css ki file bhi hmm import karne ki liye react me method use karte ha
 
 // export default App;
 it means : hm sirf aik class export kar rhe haa
-
-
+agar hamne aik se zeada component ka store karwana ho tuu hmm 
+default nhi laghee gee
+Then we use this syntax
+export{
+  component 1,
+  component2, comp3 .....
+}
+on the other hand in APP.js we import using this syntax{ .. , ..}
+---------------------------------------------
 //ReactDOM.render(
 ...
 ...
@@ -82,3 +89,57 @@ syntax inline css ---
 
 for showing shortcuts or suggestion 
 then rename file as app.jsx
+------------------------------BOOTSTRAP------
+https://react-bootstrap.github.io/getting-started/introduction
+
+for installing bootsrap
+
+npm install react-bootstrap bootstrap
+
+for connecting css
+import 'bootstrap/dist/css/bootstrap.min.css';// in index.js
+
+
+For using MATERIAL UI
+https://mui.com/getting-started/installation/
+
+for installing
+npm install @mui/material @emotion/react @emotion/styled
+
+agar hamne aik se zeada component ka store karwana ho tuu hmm 
+default nhi laghee gee
+Then we use this syntax
+export{
+  component 1,
+  component2, comp3 .....
+}
+
+html to jsx convert compiler use for convert html to jsx
+https://magic.reactjs.net/htmltojsx.htm
+----------------------------------------------
+//state
+
+ jitna bhi hmara functionality ka kam hoga wo dab state me hoga
+syntax..
+constructor(){ // constructor hmm 2 classes ko merge karne ki liye lagatee ha
+   super()// yeh tab call karte ha jab hmm parent se koi value lee rhe hoo
+
+}
+
+----------function
+for create function function syntax 
+
+functionname { //we dont use funtion keyword in react
+
+}
+
+//simple function me 
+wo  state function ka leta ha 
+
+//or arrow function me
+wo state component ka leta ha
+
+simple function bind karne ka method 
+
+ syntax//this.funcname = this.funcname.bind(this)
+recommendation is use arrow function
